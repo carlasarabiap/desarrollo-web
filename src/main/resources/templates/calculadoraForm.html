@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <h1>Calculadora</h1>
+    <form method="GET" action="http://localhost:8082/calcular">
+        <table>
+            <tr>
+                <td>Número1 :</td>
+                <td> <input type="number" name="nro1" value="0" required></td>
+                <!-- para ingresar decimales en el input numérico: step=".01"-->
+            </tr>
+            <tr>
+                <td>Número2 :</td>
+                <td> <input type="number" name="nro2" value="0" required min="0"></td>
+            </tr>
+
+            <tr>
+                <td>Operación:</td>
+                <!-- Creating radio buttons -->
+                <td>
+                    <input type="radio" name="operador" value="sumar"> Sumar </br>
+                    <input type="radio" name="operador" value="restar"> Restar </br>
+                    <input type="radio" name="operador" value="multiplicar"> Multiplicar </br>
+                    <input type="radio" name="operador" value="dividir"> Dividir </br>
+                </td>
+            </tr>
+            <tr>
+                <!-- Creating buttons -->
+                <td><input type="reset" value="Borrar"></td>
+                <td><input type="submit" value="Calcular"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
